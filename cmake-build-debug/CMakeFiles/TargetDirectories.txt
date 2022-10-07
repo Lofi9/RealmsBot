@@ -1,3 +1,0 @@
-C:/Users/matth/CLionProjects/RealmsBot/cmake-build-debug/CMakeFiles/..dir
-C:/Users/matth/CLionProjects/RealmsBot/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/matth/CLionProjects/RealmsBot/cmake-build-debug/CMakeFiles/rebuild_cache.dir
