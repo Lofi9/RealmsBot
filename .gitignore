@@ -1,2 +1,3 @@
-# this is the debug thing idk i want to ignore it
+# Base directories to ignore
 cmake-build-debug/
+.idea/
