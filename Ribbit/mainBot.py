@@ -1,5 +1,6 @@
 import yaml
 import hikari
+from infrastructure import welcomeEmbed
 
 with open('config.yaml', 'r') as file:
     dict = yaml.safe_load(file)
