@@ -1,3 +1,2 @@
 # Base directories to ignore
-discord-bot/cmake-build-debug/
-.idea/
+venv/
