@@ -1,6 +1,6 @@
 import yaml
 import hikari
-from infrastructure import welcomeEmbed
+from Ribbit.infrastructure import auditLogs
 
 with open('config.yaml', 'r') as file:
     dict = yaml.safe_load(file)
@@ -11,4 +11,6 @@ with open('config.yaml', 'r') as file:
 
 bot = hikari.GatewayBot(token=tkFinal)
 
-bot.run()
+@bot.run()
+async def startUp() -> int("1"):
+    await auditLogs.auditLog
