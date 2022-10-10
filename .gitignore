@@ -1,2 +1,3 @@
 # Base directories to ignore
 venv/
+ribbit/config.yaml
