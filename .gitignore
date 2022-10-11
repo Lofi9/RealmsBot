@@ -1,7 +1,5 @@
 # Base directories to ignore
 Ribbit/config.yaml
 .idea
-
-# Added by cargo
-
-/target
+bin
+obj
