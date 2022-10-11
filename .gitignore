@@ -1,3 +1,7 @@
 # Base directories to ignore
-venv/
 Ribbit/config.yaml
+.idea
+
+# Added by cargo
+
+/target
