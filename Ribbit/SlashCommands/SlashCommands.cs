@@ -1,6 +1,9 @@
-namespace Ribbit.Ribbit.SlashCommands;
+using DSharpPlus.SlashCommands;
 
-public class SlashCommands
+namespace Ribbit.Ribbit.SlashCommands
 {
-    
+    public class SlashCommands : ApplicationCommandModule
+    {
+
+    }
 }
