@@ -53,18 +53,14 @@ namespace mainBot
         private Task Client_GuildAvailable(DiscordClient sender, GuildCreateEventArgs e)
         {
             sender.Logger.LogInformation(BotEventId, $"Guild available: {e.Guild.Name}");
-            
             return Task.CompletedTask;
         }
-
         private Task Client_ClientErrored(DiscordClient sender, ClientErrorEventArgs e)
         {
             sender.Logger.LogError(BotEventId, e.Exception, "exception occured");
-
             return Task.CompletedTask;
         }
     }
-
     public struct ConfigJson
     {
         [JsonProperty("token")]
