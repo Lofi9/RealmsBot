@@ -1,9 +1,0 @@
-%Yaml 1.2
----
-bot:
-  token: # your bot token goes here without quotations
-
-# Rename this file to "config.yaml"
-# This file is here so that you don't have to hardbake your token into your code
-# This makes it easier to share to others without having to take extra steps to remove your token
-# Happy coding!
