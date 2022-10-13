@@ -2,6 +2,7 @@ using DSharpPlus;
 using DSharpPlus.Entities;
 using mainBot;
 using DSharpPlus.Menus;
+using DSharpPlus.Net;
 
 namespace Ribbit.Ribbit.Infrastructure
 {
@@ -9,6 +10,8 @@ namespace Ribbit.Ribbit.Infrastructure
    {
       public async Task Logging(AuditLogActionCategory actCat, AuditLogActionType actType)
       {
+         DiscordAuditLogEntry entry = new DiscordAuditLogIntegrationEntry();
+         
          // audit log types
          var create = actCat == AuditLogActionCategory.Create;
          var delete = actCat == AuditLogActionCategory.Delete;
