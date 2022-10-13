@@ -3,6 +3,8 @@ using DSharpPlus;
 using DSharpPlus.EventArgs;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using DSharpPlus.SlashCommands;
+using Ribbit.Ribbit.SlashCommands;
 
 namespace mainBot
 {
@@ -13,8 +15,8 @@ namespace mainBot
 
         public static void Main(string[] args)
         {
-            var prog = new RealmsBot();
-            prog.RunBotAsync().GetAwaiter().GetResult();
+            var bot = new RealmsBot();
+            bot.RunBotAsync().GetAwaiter().GetResult();
         }
 
         public async Task RunBotAsync()
@@ -40,6 +42,9 @@ namespace mainBot
                 this.Client.ClientErrored += this.Client_ClientErrored;
 
                 await this.Client.ConnectAsync();
+
+                var slash = this.Client.UseSlashCommands();
+                slash.RegisterCommands<SlashCommands>(963526680062881873);
 
                 await Task.Delay(-1);
             }
