@@ -1,12 +1,12 @@
 ﻿using System.Text;
 using DSharpPlus;
+using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using DSharpPlus.SlashCommands;
-using Ribbit.Ribbit.SlashCommands;
 using DSharpPlus.Entities;
-using Ribbit.Ribbit.Infrastructure;
+using Ribbit.Ribbit.SlashCommands;
 
 namespace mainBot
 {
@@ -14,6 +14,7 @@ namespace mainBot
     {
         public readonly EventId BotEventId = new EventId(42, "RealmsBot");
         public DiscordClient Client { get; set; }
+        public DiscordWebhook Webhook { get; set; }
 
         public static void Main(string[] args)
         {
@@ -48,6 +49,13 @@ namespace mainBot
                 var slash = this.Client.UseSlashCommands();
                 slash.RegisterCommands<BaseCommands>(963526680062881873);
 
+                var logs = new DiscordWebhookBuilder
+                {
+                    Username = "RibbitLogs",
+                    AvatarUrl = "",
+                    Embeds = {  },
+                };
+
                 await Task.Delay(-1);
             }
         private Task Client_Ready(DiscordClient sender, ReadyEventArgs e)
@@ -55,7 +63,6 @@ namespace mainBot
             sender.Logger.LogInformation(BotEventId, "Client is ready to process events.");
             return Task.CompletedTask;
         }
-
         private Task Client_GuildAvailable(DiscordClient sender, GuildCreateEventArgs e)
         {
             sender.Logger.LogInformation(BotEventId, $"Guild available: {e.Guild.Name}");

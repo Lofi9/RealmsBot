@@ -1,4 +1,6 @@
+using DSharpPlus;
 using DSharpPlus.Entities;
+using mainBot;
 using DSharpPlus.Menus;
 
 namespace Ribbit.Ribbit.Infrastructure
