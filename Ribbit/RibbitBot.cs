@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using DSharpPlus.SlashCommands;
 using Ribbit.Ribbit.SlashCommands;
+using Ribbit.Ribbit.Infrastructure;
 
 namespace mainBot
 {
@@ -43,8 +44,10 @@ namespace mainBot
 
                 await this.Client.ConnectAsync();
 
+                var ping = this.Client.Ping;
+
                 var slash = this.Client.UseSlashCommands();
-                slash.RegisterCommands<SlashCommands>(963526680062881873);
+                slash.RegisterCommands<BaseCommands>(963526680062881873);
 
                 await Task.Delay(-1);
             }
