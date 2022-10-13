@@ -34,7 +34,7 @@ namespace Ribbit.Ribbit.Infrastructure
          var MBD = actType == AuditLogActionType.MessageBulkDelete;
          
          var deleteLogs = new[]
-            { roleDelete, webhookDelete, invDelete, channelDelete, permDel };
+            { roleDelete, webhookDelete, invDelete, channelDelete, permDel, MD, MBD };
          
          // other logs
          var kick = actType == AuditLogActionType.Kick;
@@ -56,11 +56,6 @@ namespace Ribbit.Ribbit.Infrastructure
          var permUpdate = actType == AuditLogActionType.OverwriteUpdate;
          var updateLogs = new[]
             { guildUpdate, roleUpdate, webhookUpdate, userUpdate, userRoleUpdate, channelsEdit, permUpdate };
-
-         if (logTypes[1] == create)
-         {
-            
-         }
       }
    }
 }

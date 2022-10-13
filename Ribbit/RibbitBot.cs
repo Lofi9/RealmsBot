@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using DSharpPlus.SlashCommands;
 using Ribbit.Ribbit.SlashCommands;
+using DSharpPlus.Entities;
 using Ribbit.Ribbit.Infrastructure;
 
 namespace mainBot
@@ -43,15 +44,12 @@ namespace mainBot
                 this.Client.ClientErrored += this.Client_ClientErrored;
 
                 await this.Client.ConnectAsync();
-
-                var ping = this.Client.Ping;
-
+                
                 var slash = this.Client.UseSlashCommands();
                 slash.RegisterCommands<BaseCommands>(963526680062881873);
 
                 await Task.Delay(-1);
             }
-
         private Task Client_Ready(DiscordClient sender, ReadyEventArgs e)
         {
             sender.Logger.LogInformation(BotEventId, "Client is ready to process events.");
