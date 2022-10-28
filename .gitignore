@@ -1,7 +1,5 @@
 # Base directories to ignore
-.idea
-bin
-obj
+
 
 # Config ignore
 Ribbit/config.json
