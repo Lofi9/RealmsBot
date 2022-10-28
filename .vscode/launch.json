@@ -8,9 +8,9 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "$HOME/Ino/RealmsBot/Ribbit/main.rs",
+            "program": "$HOME/ino/RealmsBot/Ribbit/main.rs",
             "args": [],
-            "cwd": "$HOME/Ino/RealmsBot/"
+            "cwd": "$HOME/ino/RealmsBot/"
         }
     ]
 }
