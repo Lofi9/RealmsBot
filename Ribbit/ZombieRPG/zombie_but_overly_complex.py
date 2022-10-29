@@ -11,17 +11,7 @@ def space(x):
     sleep(x)
     print(" \n ")
 
-weapons = ['Shotgun, Durability: 2',
-    'Crossbow, Durability: 5',
-    'Axe, Durability: 4',
-    'Baseball Bat, Durability: 3',
-    'Katana, Durability: 5',
-    'Handgun, Durability: 3',
-    'Machete, Durability: 4',
-    'Sledge Hammer, Durability: 5',
-    'Hatchet, Durability: 4',
-    'Cleaving Saw, Durability: 4'
-]
+
 
 # count of zombies 
 zomb_count = randint(1,100)
@@ -52,7 +42,6 @@ if choice == "Run" or choice == "1":
 
 
 print("You have a few weapons at your desposal choose one from this list:")
-print(weapons)
 space(2)
 
 #durabilities
@@ -67,14 +56,38 @@ shd = 5
 hd = 4
 csd = 4
 
+weapons = (f"""Shotgun, Durability: {sgd}
+    Crossbow, Durability: {cbd}
+    Axe, Durability: {ad}
+    Baseball Bat, Durability: {bbd}
+    Katana, Durability: {kd}
+    Handgun, Durability: {hgd}
+    Machete, Durability: {md}
+    Sledge Hammer, Durability: {shd}
+    Hatchet, Durability: {hd}
+    Cleaving Saw, Durability: {csd}
+""")
+print(weapons)
 while zomb_count > 0 and dead == False:
     choice_1 = input("Options: \n1. Choose Weapon. \n2. Search For Ammo. \n3. Search For Companion.").title()
     # Live Counter
     if hits <= 1:
         dead = True
     if choice_1 == "2" or choice_1 == "Search For Ammo":
-        break
-        # FINISH #####################################################################################################
+        pass
+        luck = randint(1,100)
+        if luck <= 50:
+            sgd += randint(0,2)
+            cbd += randint(0,5)
+            ad += randint(0,4)
+            bbd += randint(0,3)
+            kd += randint(0,5)
+            hgd += randint(0,3)
+            md += randint(0,4)
+            shd += randint(0,5)
+            hd += randint(0,4)
+            csd += randint(0,4)
+            
     elif choice_1 == "3" or choice_1 == "Search For Companion":
         find_chance = randint(1,100)
         if find_chance <= 25:
