@@ -4,6 +4,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-bot = crescent.Bot(os.getenv('TOKEN'))
+bot = crescent.Bot(os.getenv('TOKEN'))  # type: ignore
 
 bot.run()

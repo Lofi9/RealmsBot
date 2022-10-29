@@ -1,4 +1,5 @@
 # Base directories to ignore
+.vscode
 
 # Config ignore
 Ribbit/.env
