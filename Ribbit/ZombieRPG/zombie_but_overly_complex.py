@@ -71,22 +71,61 @@ print(weapons)
 while zomb_count > 0 and dead == False:
     choice_1 = input("Options: \n1. Choose Weapon. \n2. Search For Ammo. \n3. Search For Companion.").title()
     # Live Counter
+ 
     if hits <= 1:
         dead = True
+  
     if choice_1 == "2" or choice_1 == "Search For Ammo":
-        pass
         luck = randint(1,100)
         if luck <= 50:
-            sgd += randint(0,2)
-            cbd += randint(0,5)
-            ad += randint(0,4)
-            bbd += randint(0,3)
-            kd += randint(0,5)
-            hgd += randint(0,3)
-            md += randint(0,4)
-            shd += randint(0,5)
-            hd += randint(0,4)
-            csd += randint(0,4)
+            print("you were able to find some ammo")
+            
+            sg_amm = randint(0,2)
+            cb_amm = randint(0,5)
+            a_amm = randint(0,4)
+            bb_amm = randint(0,3)
+            k_amm = randint(0,5)
+            hg_amm = randint(0,3)
+            m_amm = randint(0,4)
+            sh_amm = randint(0,5)
+            h_amm = randint(0,4)
+            cs_amm = randint(0,4)
+            
+            # RELOAD SHOTGUN
+            if sg_amm >= 0:
+                sgd += sg_amm
+                print(f"You found {sg_amm} ammo for your shotgun")
+            else:
+                print("You werent able to find any ammo for your shotgun")
+            
+            # RELOAD CROSSBOW
+            if cb_amm >= 0:
+                cbd += cb_amm
+                print(f"You were able to find {cb_amm} crossbow bolts")
+            else:
+                print("You werent able to find any crossbow bolts")
+                
+            # RELOAD AXE
+            if a_amm >= 0:
+                ad += a_amm
+                print(f"You were able to find a new axe that... Somehow fused with the old one??? You get the sense that your axe gained {a_amm} durability...")
+            else:
+                print("You werent able to find anymore axes? I dont know what you expected...")
+                
+            # RELOAD BASEBALL BAT
+            if bb_amm >= 0:
+                bbd += bb_amm
+                print(f"You found a way to relaod a baseball bat... Its more inpressive than anything else... The bat gains {bb_amm} durability?")
+            else:
+                print("You attempted to cock the bat like a shotgun... You think you heard a zombie laugh at you")
+                
+            # RELOAD KATANA
+            if k_amm >= 0:
+                kd += k_amm
+                print(f"You find a rock and sharpen your katana, it gains {k_amm} durability")
+            else:
+                print("You have a sword... I dont know how you expected to reload it...")
+            
             
     elif choice_1 == "3" or choice_1 == "Search For Companion":
         find_chance = randint(1,100)
@@ -94,6 +133,7 @@ while zomb_count > 0 and dead == False:
             found = True
             print("Thanks for saving me! My name is bill")
             print("I'll help you from now on")
+  
     elif choice_1 == "1" or choice_1 == "Choose Weapon":
         choice = input("Choose your weapon")
  
@@ -243,4 +283,4 @@ while zomb_count > 0 and dead == False:
         else:
             print("Bill wasnt able to kill any zombies")
         
-
+# FINISH STORY###############################
