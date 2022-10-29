@@ -3,7 +3,7 @@ from tkinter import *
 from PIL import ImageTk,Image
 # original screen
 root = Tk()
-root.iconbitmap("Icon/icon.ico")
+# root.iconbitmap("Icon/icon.ico")
 root.geometry("300x200")
 root.title("Chatbot")
 label=Label(root,text="Please enter your name").pack(pady=10)
