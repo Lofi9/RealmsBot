@@ -1,4 +1,4 @@
 # Base directories to ignore
 
 # Config ignore
-
+Ribbit/.env
